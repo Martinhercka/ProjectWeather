@@ -2,6 +2,7 @@ $(document).ready(function() {
   $("#buttonget").click(function(){
     var city=$("#city").val();
     var code=$("#code").val();
+
     if(city.length>1){
       var urllink='http://api.openweathermap.org/data/2.5/weather?q=';
       urllink=urllink + city;
@@ -26,6 +27,8 @@ console.log(urllink);
          	$("#pressure").text(pressure+"Pa");
          	var humidity=data.main.humidity;
          	$("#humi").text(humidity+" m3");
+         	var wind= data.wind.speed;
+         	$("#wind").text(wind);
             
             console.log("desc:"+data.weather[0].description);
          },
@@ -35,6 +38,15 @@ console.log(urllink);
 
     }
   });
+
+  $('#details').click(function() {
+    if( $('#details:checked').length > 0 ) {
+        $(".showHide").show();
+
+    } else {
+        $(".showHide ").hide();
+    }
+}); 
  
 
 });
