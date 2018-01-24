@@ -1,49 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+
 <head>
 
   <title>Weather Project</title>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
  
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link href="style.css" rel="stylesheet">
+  <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
   <script src="script.js"></script>
+ 
+  
 
 
 </head>
 <body>
-<form>
+
 
 <div class="container">
   <h2>Weather Project</h2>
          
   <table class="table table-bordered">
-    <thead>
+    
       <tr>
-        <th><div id="city">City</div></th>
+        <td><span>City</span> <input type="text" id="city" name="citytext" placeholder="Enter City"> </td>
 
-        <th><input type="text" id="city" name="citytext" placeholder="Enter City"></th>
-        <th><div id="coutrycode">CountryCode</div></th>
-        <th> <input type="text" id="code" name="countrycode" size="1"></th>
+      
+        <td><span>Country Code</span> <input type="text" id="code" name="countrycode"></td>
       </tr>
-    </thead>
-    <tbody>
+    
+    
       <tr>
         <td>Details:<input type="checkbox" name="details"></td>
-        <td><input type="button" id="buttonget" name="buttongt" value="Get"></td>
+        <td><input type="button"  id="buttonget" name="buttongt" value="Get"></td>
         
       </tr>
       <tr>
         <td><div id="temperature">Temperature:</div></td>
-        <td><input type="text" name="temperature"></td>
+        <td><div id="temp"></td>
         
       </tr>
       <tr>
         <td><div id="humidity">Humidity</div></td>
-        <td><input type="text" name="humidity"></td>
+        <td><div id="humi"></div></td>
         
       </tr>
 
@@ -55,13 +55,14 @@
 
       <tr>
         <td><div id="humidity">Pressure</div></td>
-        <td><input type="text" name="pressure"></td>
+        <td><div id="pressure"></div></td>
         
       </tr>
     </tbody>
   </table>
 </div>
-</form>
+
+
 
 </body>
 </html>
