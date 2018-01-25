@@ -28,24 +28,38 @@ console.log(urllink);
          	var humidity=data.main.humidity;
          	$("#humi").text(humidity+" %");
          	var wind= data.wind.speed;
-         	$("#wind").text(wind);
+         	$("#wind").text(wind+"m/s");
           var desc = data.weather[0].description;
           $("#desc").text(desc);  
 
+
           var sunset=data.sys.sunset;
-          var sunset2=new Date(sunset*1000).toString()
-          $("#sunset").text(sunset2);
+          var sunset2=new Date(sunset*1000);
+          var h1=sunset2.getHours();
+          var m1=sunset2.getMinutes();
+          $("#sunset").text(h1+":"+m1);
 
 
           var sunrise=data.sys.sunrise;
-          var sunrise2=new Date(sunrise*1000).toString()
+          var sunrise2=new Date(sunrise*1000);
+          var h=sunrise2.getHours();
+          var m=sunrise2.getMinutes();
           
-          $("#sunrise").text(sunrise2);
+          $("#sunrise").text(h+":"+m);
 
           
           var visibility=data.visibility;
           $("#visibility").text(visibility);
-            console.log("desc:"+data.weather[0].description);
+
+          var min=data.main.temp_min;
+          min=-273.15+min;
+          $("#min").text(min+"°C");
+
+          var max=data.main.temp_max;
+          max=-273.15+max;
+          $("#max").text(max+"°C");
+
+           
          },
          type: 'GET'
 
