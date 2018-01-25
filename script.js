@@ -49,7 +49,7 @@ console.log(urllink);
 
           
           var visibility=data.visibility;
-          $("#visibility").text(visibility);
+          $("#visibility").text(visibility/1000+"km");
 
           var min=data.main.temp_min;
           min=-273.15+min;
@@ -75,7 +75,13 @@ console.log(urllink);
     } else {
         $(".showHide ").hide();
     }
+
+
 }); 
+
+   $("#buttonget").click(function(){
+    $(".t2").show();
+    });
  
 
 });

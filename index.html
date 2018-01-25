@@ -18,10 +18,10 @@
 <body>
 
 
-<div class="container">
+
   <h2>Weather Project</h2>
-         
-  <table class="table table-bordered">
+      <div class="container">   
+  <table class="table table-striped">
     
       <tr>
         <td><span>City</span> <input type="text" id="city" name="citytext" placeholder="Enter City"> </td>
@@ -33,9 +33,10 @@
     
       <tr>
         <td>Details:<input type="checkbox" id="details" name="details"></td>
-        <td><input type="button"  id="buttonget" name="buttongt" value="Get"></td>
+        <td><input type="button" class="btn btn-dark"  id="buttonget" name="buttongt" value="Get"></td>
         
       </tr>
+      <table class="table table-striped t2" style="display:none;">
       <tr>
         <td><div id="temperature">Temperature:</div></td>
         <td><div id="temp"></td>
@@ -59,9 +60,9 @@
         
       </tr>
       </table>
-      <table class="table table-bordered showHide" style="display:none">
+      <table class="table table-striped showHide" style="display:none">
       <tr>
-        <td><div id="humidity">Wind speed</div></td>
+        <td><div id="windspeed">Wind speed</div></td>
         <td><div id="wind"></div></td></p>
         
       </tr>
