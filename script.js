@@ -24,12 +24,27 @@ console.log(urllink);
          	temp=Math.round(temp);
          	$("#temp").text(temp+"°C");
          	var pressure=data.main.pressure;
-         	$("#pressure").text(pressure+"Pa");
+         	$("#pressure").text(pressure+"hPa");
          	var humidity=data.main.humidity;
-         	$("#humi").text(humidity+" m3");
+         	$("#humi").text(humidity+" %");
          	var wind= data.wind.speed;
          	$("#wind").text(wind);
-            
+          var desc = data.weather[0].description;
+          $("#desc").text(desc);  
+
+          var sunset=data.sys.sunset;
+          var sunset2=new Date(sunset*1000).toString()
+          $("#sunset").text(sunset2);
+
+
+          var sunrise=data.sys.sunrise;
+          var sunrise2=new Date(sunrise*1000).toString()
+          
+          $("#sunrise").text(sunrise2);
+
+          
+          var visibility=data.visibility;
+          $("#visibility").text(visibility);
             console.log("desc:"+data.weather[0].description);
          },
          type: 'GET'
