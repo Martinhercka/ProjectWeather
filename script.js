@@ -59,6 +59,21 @@ console.log(urllink);
           max=-273.15+max;
           $("#max").text(max+"°C");
 
+            var firstcoord=data.coord.lon;
+            var secondcoord=data.coord.lat;
+            console.log(firstcoord+","+secondcoord);
+  
+
+  var uluru = {lat: secondcoord, lng:firstcoord};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 4,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+
            
          },
          type: 'GET'
@@ -85,6 +100,10 @@ console.log(urllink);
  
 
 });
+
+
+
+
 
 
 

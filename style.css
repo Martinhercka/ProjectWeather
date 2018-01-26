@@ -1,0 +1,18 @@
+#temp,#humi,#desc,#pressure,#wind,#sunset,#sunrise,#visibility,#min,#max {
+   text-align: right;
+}
+
+
+tr:nth-child(even) {background: 	#87CEFA}
+tr:nth-child(odd) {background: 	#66CDAA}
+
+h2{text-align: center;}
+
+ #map {
+        height: 400px;
+        width: 30%;
+        margin:auto;
+
+       }
+
+ body{ background-image: url("weather.png") };
